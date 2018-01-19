@@ -10,6 +10,7 @@ import org.sql2o.Sql2oException;
 import java.util.List;
 
 public class Sql2oTaskDao implements TaskDao{
+
     private final Sql2o sql2o;
     public Sql2oTaskDao(Sql2o sql2o) {
         this.sql2o = sql2o; //makes sql2o object available everywhere so methods can be called on it
@@ -74,10 +75,11 @@ public class Sql2oTaskDao implements TaskDao{
     @Override
     public void clearAllTasks() {
         String sql = "DELETE from tasks";
-        try (Connection con = sql2o.open()){
+        try (Connection con = sql2o.open()) {
             con.createQuery(sql)
                     .executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);
         }
+    }
     }

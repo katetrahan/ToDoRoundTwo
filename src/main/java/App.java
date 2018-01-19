@@ -1,11 +1,9 @@
-import dao.Sql2oCategoryDao;
-import dao.Sql2oTaskDao;
-import models.Category;
-import models.Task;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 import dao.Sql2oCategoryDao;
 import dao.Sql2oTaskDao;
@@ -15,9 +13,12 @@ import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-/**
- * Created by Guest on 1/18/18.
- */
+
+import static spark.Spark.get;
+import static spark.Spark.post;
+import static spark.Spark.staticFileLocation;
+
+
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");

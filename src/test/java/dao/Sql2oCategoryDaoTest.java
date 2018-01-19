@@ -1,20 +1,18 @@
 package dao;
 
 import models.Category;
+import models.Task;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.sql2o.Sql2o;
 
-import java.sql.Connection;
+import org.sql2o.Connection;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-/**
- * Created by Guest on 1/18/18.
- */
+
 public class Sql2oCategoryDaoTest {
 
     private Sql2oCategoryDao categoryDao;

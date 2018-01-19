@@ -1,6 +1,7 @@
 package dao;
 
 import models.Category;
+import models.Task;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface CategoryDao {
 
     //read
     List<Category> getAll();
-//    List<Task> getAllTasksByCategory(int categoryId);
+    List<Task> getAllTasksByCategory(int categoryId);
     Category findById(int id);
 
     //update
